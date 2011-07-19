@@ -7,7 +7,9 @@
 
 
 #include "Compare.h"
-
+//this is a change in the source code
+//but it doesn't do anything
+//except let me test this repository
 bool minimize=false, calcPatt=false, volNorm=true;
 int Pattern::nInt=0, err=0, nIter=0, Pattern::nLambda=0;
 Shape *firstShape=0;
