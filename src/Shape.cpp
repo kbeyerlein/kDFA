@@ -1573,6 +1573,7 @@ void Shape::LoadIntFromFile(Pattern *patts, double aD)
 		}
 		//TODO Insert call to interpolation routine
 		// Interpolate(inQ, inI, neededSa,patts[i].I);
+		interp(neededSa, Pattern::nInt, inSa, inI, nI, &(patts[i].I) );
 		delete [] neededSa;
 	}
 
