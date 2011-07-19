@@ -7,6 +7,7 @@
 
 #ifndef GLOBALFUNCTIONS_H_
 #define GLOBALFUNCTIONS_H_
+
 #include <cmath>
 #include <gsl/gsl_errno.h>
 #include <gsl/gsl_spline.h>
