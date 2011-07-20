@@ -4,7 +4,7 @@
  *  Created on: Jul 19, 2011
  *      Author: ken
  */
-#include "globalfunctions.h"
+#include "Global.h"
 double Samplemax (double size, double wv,  int pkPts)
 /*
  * For a cubic particle, gives smallest peak size, well smallest

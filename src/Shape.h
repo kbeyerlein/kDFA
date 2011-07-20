@@ -6,7 +6,7 @@
 #include "Distance.h"
 #include "Position.h"
 #include "Pattern.h"
-#include "globalfunctions.h"
+#include "Global.h"
 
 
 
