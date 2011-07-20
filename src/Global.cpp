@@ -29,7 +29,7 @@ void interp (double *xs,int nxs,double *inx, double *iny, int ninvalues, double 
 	return;
 }
 */
-void interp (double *inx, double *iny, int ninvalues, double *xs, double *outvalues, int nxs )
+void Interp (double *inx, double *iny, int ninvalues, double *xs, double *outvalues, int nxs )
 {
 	for (int i = 0; i<nxs; i++)
 	{

@@ -18,7 +18,7 @@
 
 double Samplemax (double size, int pkPts, double wv);
 //void interp (double *xs,int nxs,double *inx, double *iny, int ninvalues, double *outvalues);
-void interp (double *, double *, int, double *, double *, int);
+void Interp (double *, double *, int, double *, double *, int);
 void splinterp (double *xs,int nxs,double *inx, double *iny, int nin, double *outvalues);
 void linterp (double *xs,int nxs,double *inx, double *iny, int nin, double *outvalues);
 bool addelement(double**myarray, double newelement, unsigned int &elements);
