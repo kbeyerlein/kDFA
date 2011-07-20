@@ -1576,6 +1576,7 @@ void Shape::LoadIntFromFile(Pattern *patts, double aD)
 		Interp(inSa, inI, nI,neededSa, patts[i].I, Pattern::nInt);
 		delete [] neededSa;
 		//This is just a test.
+		//Test2
 	}
 
 	delete [] inSa;
