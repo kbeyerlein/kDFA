@@ -379,6 +379,9 @@ void Shape::FindPreCalcPatts()
 		}
 		pattfiles.close();
 	}
+	else{
+		cout<<"Warning: Unable to open pre-calculated pattern file: "<< temp<<endl;
+	}
 }
 void Shape::LoadPatterns()
 {
@@ -1571,7 +1574,7 @@ void Shape::LoadIntFromFile(Pattern *patts, double aD)
 			cout<<"Error: Exception caught in Pattern::LoadIntFromFile"<<e.what()<<endl;
 			exit(1);
 		}
-		//TODO Insert call to interpolation routine
+		// call to interpolation routine
 		// Interpolate(inQ, inI, neededSa,patts[i].I);
 		Interp(inSa, inI, nI,neededSa, patts[i].I, Pattern::nInt);
 		delete [] neededSa;
