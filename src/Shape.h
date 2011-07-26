@@ -32,10 +32,6 @@ public:
 
 	int LoadPositions();
 	void LoadDistances();
-	void FindPreCalcPatts();
-	void CheckPreCalcPatts();
-	void LoadPatterns();
-	void LoadIntFromFile(Pattern *, double);
 	int InitParamBounds();
 	int SurfaceRelaxation(Distance *);
 	int SurfaceRelaxation(double *, double *);
@@ -68,5 +64,12 @@ public:
 	void CopyDistance(Distance *, Distance *);
 	int GetNumSizes();
 	int GetIndexOfShell(int);
+
+	// Functions explicitly working with pre-calculated patterns
+	// 		(in: Shape_PreCalcPatts.cpp)
+	void FindPreCalcPatts();
+	void CheckPreCalcPatts();
+	void LoadPatterns();
+	void LoadIntFromFile(Pattern *, double);
 };
 #endif
