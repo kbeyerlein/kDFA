@@ -66,6 +66,7 @@ void InputPreCalcPatterns()
 	while((curShape!=0)&& (err==0)){
 		if (curShape->pattPath!=""){
 			curShape->FindPreCalcPatts();
+			curShape->CheckPreCalcPatts();
 		}
 		curShape=curShape->nextShape;
 
