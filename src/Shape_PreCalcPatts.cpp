@@ -116,7 +116,13 @@ void Shape::LoadIntFromFile(Pattern *patts, double aD)
 	double minSa, maxSa, dsa;
 	double *inSa, *inI;
 	ifstream calcedPatt;
-	//Read the important info from the first line of the intensity file
+	//Read the important info from the first two lines of the intensity file
+	// Input format:
+	// 			(lattice) (shape) (shell #) (# atoms)
+	//			(minS*a) (maxS*a) (ds*a) (# Int points)
+	//			(I_1)
+	//			(I_2)
+	//			(...)
 	calcedPatt.open(patts[0].fileName.c_str());
 	if (calcedPatt.is_open()){
 		string firstLine;
@@ -124,34 +130,8 @@ void Shape::LoadIntFromFile(Pattern *patts, double aD)
 		stringstream test(firstLine);
 		while (!test.eof()){
 			string stuff;
-			test>>stuff;
-			if (stuff=="shell:"){
-				test>>shell;
-			}
-			else if(stuff=="latt:"){
-				test>>lattice;
-			}
-			else if (stuff=="shape:"){
-				test>>shape;
-			}
-			else if (stuff=="nAtoms:"){
-				test>>nAtoms;
-			}
-			else if (stuff=="minS*a:"){
-				test>>minSa;
-			}
-			else if (stuff=="maxS*a;"){
-				test>>maxSa;
-			}
-			else if (stuff=="d(s*a):"){
-				test>>dsa;
-			}
-			else if (stuff=="nInt:"){
-				test>>nI;
-			}
-			else{
-
-			}
+			test>>lattice>>shape>>shell>>nAtoms;
+			test>>minSa>>maxSa>>dsa>>nI;
 		}
 
 		//Allocate and Input the intensity from file
